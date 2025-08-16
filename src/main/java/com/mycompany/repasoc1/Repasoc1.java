@@ -35,7 +35,8 @@ public class Repasoc1 {
         
         
         //Creamos un ArrayList ára almacenar nombres
-        ArrayList<String> nombres = new ArrayList<>();
+        
+        /*ArrayList<String> nombres = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         String entrada;
 
@@ -53,7 +54,42 @@ public class Repasoc1 {
         // mostramos los nombres ingresados
         System.out.println("\nNombres ingresados: ");
         for (String nombre : nombres) {
-            System.out.println("El nombre ingresado fue: " + nombre);
+            System.out.println("El nombre ingresado fue: " + nombre); 
+        }*/
+        
+        //Creamos una LinkedLoist para las tareas
+        LinkedList<String> tareas = new LinkedList<>();
+        Scanner recibir = new Scanner(System.in);
+        int opcion;
+        
+        //Menu principal
+        System.out.println("\n 1.- Agregar tarea \n 2.- Eliminar primera tarea \n 3.- Mostrar tareas \n 4.- Salir");
+        System.out.println("Elige una opción: ");
+        opcion = recibir.nextInt(); //Leer la opcíon
+        recibir.nextLine(); //Limpiar buffer
+        
+        switch(opcion){
+            case 1:
+                //Agregar una nueva tarea
+                System.out.println("Escribe la tarea: ");
+                String tarea = recibir.nextLine();
+                tareas.add(tarea);
+                break;
+                
+            case 2:
+                //Eliminar la primer tarea si existe
+                if(!tareas.isEmpty()){
+                    System.out.println("Tarea eliminada: " + tareas.removeFirst());
+                } else {
+                    System.out.println("No hay tareas para eliminar");
+                }
+                break;
+            case 3:
+                //Mostrar todas las tareas
+                System.out.println("Lista de tareas: ");
+                for(String t : tareas){
+                    System.out.println("- " + t);
+                }
         }
         
     }
