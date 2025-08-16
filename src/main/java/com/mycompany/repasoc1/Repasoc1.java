@@ -58,43 +58,44 @@ public class Repasoc1 {
         }*/
         
         //Creamos una LinkedLoist para las tareas
-        LinkedList<String> tareas = new LinkedList<>();
-        Scanner recibir = new Scanner(System.in);
-        int opcion;
         
-        //Menu principal
-        System.out.println("\n 1.- Agregar tarea \n 2.- Eliminar primera tarea \n 3.- Mostrar tareas \n 4.- Salir");
-        System.out.println("Elige una opción: ");
-        opcion = recibir.nextInt(); //Leer la opcíon
-        recibir.nextLine(); //Limpiar buffer
-        
-        switch(opcion){
-            case 1:
-                //Agregar una nueva tarea
-                System.out.println("Escribe la tarea: ");
-                String tarea = recibir.nextLine();
-                tareas.add(tarea);
-                break;
-                
-            case 2:
-                //Eliminar la primer tarea si existe
-                if(!tareas.isEmpty()){
-                    System.out.println("Tarea eliminada: " + tareas.removeFirst());
-                } else {
-                    System.out.println("No hay tareas para eliminar");
-                }
-                break;
-                
-            case 3:
-                //Mostrar todas las tareas
-                System.out.println("Lista de tareas: ");
-                for(String t : tareas){
-                    System.out.println("- " + t);
-                }
-        }
-        
-    }
-    
-    
-    
+            LinkedList<String> tareas = new LinkedList<>();
+            Scanner recibir = new Scanner(System.in);
+            int opcion;
+        do {
+            //Menu principal
+            System.out.println("\n1.- Agregar tarea \n2.- Eliminar primera tarea \n3.- Mostrar tareas \n4.- Salir");
+            System.out.println("Elige una opción: ");
+            opcion = recibir.nextInt(); //Leer la opcíon
+            recibir.nextLine(); //Limpiar buffer
+
+            switch (opcion) {
+                case 1:
+                    //Agregar una nueva tarea
+                    System.out.println("Escribe la tarea: ");
+                    String tarea = recibir.nextLine();
+                    tareas.add(tarea);
+                    break;
+
+                case 2:
+                    //Eliminar la primer tarea si existe
+                    if (!tareas.isEmpty()) {
+                        System.out.println("Tarea eliminada: " + tareas.removeFirst());
+                    } else {
+                        System.out.println("No hay tareas para eliminar");
+                    }
+                    
+                    break;
+
+                case 3:
+                    //Mostrar todas las tareas
+                    System.out.println("Lista de tareas: ");
+                    for (String t : tareas) {
+                        System.out.println("- " + t);
+                    }
+                    
+                    break;
+            }
+        } while(opcion !=4);  
+   }   
 }
