@@ -15,7 +15,7 @@ public class Repasoc1 {
 
     public static void main(String[] args) {
 
-        //Arreglo de 5 calificaciones
+       /* //Arreglo de 5 calificaciones
         double[] calificaciones = new double[5];
         Scanner sc = new Scanner(System.in);
         double suma = 0;
@@ -31,9 +31,33 @@ public class Repasoc1 {
         double promedio = suma / calificaciones.length;
         
         //Mostrar el resultado
-        System.out.println("El promedio es: " + promedio);
+        System.out.println("El promedio es: " + promedio */
         
+        
+        //Creamos un ArrayList ára almacenar nombres
+        ArrayList<String> nombres = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+        String entrada;
+
+        while (true) {
+            System.out.print("Ingrese un nombre (o 'Salir' para terminar): ");
+            entrada = sc.nextLine();
+
+            if (entrada.equalsIgnoreCase("Salir")) {
+                break; // corta el ciclo
+            }
+
+            nombres.add(entrada); // agregamos el nombre a la lista
+        }
+
+        // mostramos los nombres ingresados
+        System.out.println("\nNombres ingresados: ");
+        for (String nombre : nombres) {
+            System.out.println("El nombre ingresado fue: " + nombre);
+        }
         
     }
+    
+    
     
 }
