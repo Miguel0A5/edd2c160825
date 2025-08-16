@@ -11,7 +11,7 @@ package com.mycompany.repasoc1;
 public class Repasoc1 {
 
     public static void main(String[] args) {
-        System.out.println("Hello develop !");
+        System.out.println("Hello listas !");
     }
     
 }
