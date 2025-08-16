@@ -84,6 +84,7 @@ public class Repasoc1 {
                     System.out.println("No hay tareas para eliminar");
                 }
                 break;
+                
             case 3:
                 //Mostrar todas las tareas
                 System.out.println("Lista de tareas: ");
